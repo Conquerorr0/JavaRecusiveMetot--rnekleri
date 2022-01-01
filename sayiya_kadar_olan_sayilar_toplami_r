@@ -1,0 +1,28 @@
+package sayiya_kadar_olan_sayilar_toplami_r;
+
+import java.util.Scanner;
+
+public class Sayiya_kadar_olan_sayilar_toplami_r {
+    
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        
+        System.out.print("Sayı = ");
+        int sayi=s.nextInt();
+        
+        int i=0;
+        System.out.print("1'den " + sayi + " kadar sayıların toplamı = " + toplam(i,sayi) + "\n");
+        
+    }
+    
+    public static int toplam(int i, int number){
+        
+        if(i>number){
+            return 0;
+        }
+        
+        return i+toplam(++i,number);
+        
+    }
+
+}
